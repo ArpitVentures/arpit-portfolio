@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #EDEDED;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+.font-heading {
+  font-family: var(--font-sora), sans-serif;
+}
+
+.font-sans {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+@keyframes appleShine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.apple-text-shine {
+  background: linear-gradient(
+          110deg,
+          #0B5F8A 0%,
+          #1696E6 30%,
+          #56C8FF 50%,
+          #ffffff 55%,
+          #56C8FF 60%,
+          #1696E6 80%,
+          #0B5F8A 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: appleShine 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes floatParticleSlow {
+  0%, 100% { transform: translate(0px, 0px); opacity: 0.15; }
+  50% { transform: translate(15px, -25px); opacity: 0.35; }
+}
+
+@keyframes floatParticleMedium {
+  0%, 100% { transform: translate(0px, 0px); opacity: 0.2; }
+  50% { transform: translate(-20px, 20px); opacity: 0.45; }
+}
+
+.particle-faint-1 { animation: floatParticleSlow 9s ease-in-out infinite; }
+.particle-faint-2 { animation: floatParticleMedium 12s ease-in-out infinite; }
+.particle-faint-3 { animation: floatParticleSlow 15s ease-in-out infinite; }
+.particle-faint-4 { animation: floatParticleMedium 11s ease-in-out infinite; }
+
+@keyframes terminalCursor {
+  0%, 45% { opacity: 1; }
+  46%, 100% { opacity: 0; }
+}
+
+.terminal-cursor {
+  animation: terminalCursor 1s steps(1) infinite;
+}
+
+@keyframes infiniteScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: infiniteScroll 28s linear infinite;
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
 }
