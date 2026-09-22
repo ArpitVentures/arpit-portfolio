@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Terminal,
@@ -144,9 +145,15 @@ export default function Hero() {
 
                                 <div className="flex justify-between items-center border-b border-[#141414] pb-2">
                                     <span className="text-[#A3A3A3]">CURRENT PROJECT</span>
-                                    <span className="text-white font-bold flex items-center gap-1">
-    <Cpu className="w-3 h-3 text-[#38BDF8]" />
-    VISION
+                                    <span className="text-white font-bold flex items-center gap-1.5">
+    <Image
+        src="/orbiq-icon.png"
+        alt="ORBIQ"
+        width={16}
+        height={16}
+        className="object-contain"
+    />
+    ORBIQ
 </span>
                                 </div>
 
@@ -167,7 +174,7 @@ export default function Hero() {
                             <div className="p-3 bg-[#050505] rounded-xl border border-[#1C1C1C] text-[11px] text-[#A3A3A3]">
                                 <p className="text-[#38BDF8] font-bold">&gt; {systemProfile.command}</p>
                                 <p className="mt-1 text-neutral-400 leading-relaxed font-sans text-[11px]">
-                                    Computer Science Student @ B.Tech CSE (AI/ML)
+                                    B.TECH CSE (AI/ML) @ IILM University, Greater Noida
                                 </p>
                             </div>
 

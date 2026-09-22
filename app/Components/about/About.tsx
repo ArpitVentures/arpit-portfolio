@@ -99,10 +99,18 @@ export default function About() {
                             </div>
 
                             <div className="space-y-2.5 font-mono text-xs">
-                                {systemProfile.details.slice(0, 4).map((item, idx) => (
-                                    <div key={idx} className="flex justify-between border-b border-[#141414] pb-1.5">
-                                        <span className="text-[10px] uppercase text-[#A3A3A3]">{item.label}</span>
-                                        <span className="text-white font-medium">{item.value}</span>
+                                {systemProfile.details.map((item, idx) => (
+                                    <div
+                                        key={idx}
+                                        className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-[#141414] pb-2.5"
+                                    >
+    <span className="text-[10px] uppercase text-[#A3A3A3] shrink-0">
+        {item.label}
+    </span>
+
+                                        <span className="text-white font-medium text-right sm:max-w-[78%] break-words">
+        {item.value}
+    </span>
                                     </div>
                                 ))}
                             </div>

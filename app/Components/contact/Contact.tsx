@@ -44,7 +44,7 @@ export default function Contact() {
                             <ArrowUpRight className="w-4 h-4 text-[#A3A3A3] group-hover:text-[#38BDF8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
                         </div>
                         <div>
-                            <p className="font-mono text-[10px] text-[#38BDF8] font-bold uppercase tracking-wider">Personal &amp; Internships</p>
+                            <p className="font-mono text-[10px] text-[#38BDF8] font-bold uppercase tracking-wider">Personal</p>
                             <p className="font-bold text-white font-heading mt-1 text-xs group-hover:text-[#38BDF8] transition truncate">
                                 {contactInfo.personalEmail}
                             </p>
@@ -63,7 +63,7 @@ export default function Contact() {
                             <ArrowUpRight className="w-4 h-4 text-[#A3A3A3] group-hover:text-[#8B5CF6] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
                         </div>
                         <div>
-                            <p className="font-mono text-[10px] text-[#8B5CF6] font-bold uppercase tracking-wider">Business &amp; Ventures</p>
+                            <p className="font-mono text-[10px] text-[#8B5CF6] font-bold uppercase tracking-wider">Professional &amp; Internships</p>
                             <p className="font-bold text-white font-heading mt-1 text-xs group-hover:text-[#8B5CF6] transition truncate">
                                 {contactInfo.businessEmail}
                             </p>

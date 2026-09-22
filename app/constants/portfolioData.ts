@@ -13,6 +13,9 @@ export interface Project {
     demo?: string;
     featured: boolean;
     isFoundation?: boolean;
+
+    backgroundImage: string;
+    backgroundColor: string;
 }
 
 export interface JourneyEvent {
@@ -35,8 +38,8 @@ export const systemProfile = {
     currentFocus: [
         "Backend Engineering",
         "Artificial Intelligence",
-        "System Design",
-        "Cloud Computing"
+        "Full-Stack Development",
+        "Data Structures & Algorithms"
     ],
     futureGoals: [
         "Become a Software Engineer",
@@ -45,11 +48,11 @@ export const systemProfile = {
     ],
     details: [
         { label: "Identity", value: "Arpit Srivastava" },
-        { label: "Education", value: "B.Tech CSE (AI/ML) · 2024–2028" },
+        { label: "Education", value: "B.TECH CSE (AI/ML) · 2024–2028" },
         { label: "Location", value: "India 🇮🇳" },
         { label: "Focus", value: "Backend Engineering & AI" },
-        { label: "Main Stack", value: "React / Node.js / Express / MongoDB / Python / Java" },
-        { label: "Building", value: "AI-Based Academic Warning System" }
+        { label: "Main Stack", value: "Node.js / Python / Java / React" },
+        { label: "Active Build", value: "ORBIQ v1.0.5" }
     ]
 };
 
@@ -85,22 +88,28 @@ export const projectsData: Project[] = [
             "Razorpay Subscription System",
             "Email Verification & Password Reset"
         ],
-        github: "https://github.com/ArpitVentures/frd-mini-project",
-        demo: "https://orbiq.vercel.app",
-        featured: true
+        github: "https://github.com/ArpitVentures/orbiq-by-arpit",
+        demo: "https://orbiq-by-arpit.vercel.app",
+        featured: true,
+
+        backgroundImage: "/projects/orbiq.png",
+        backgroundColor: "#07152B"
     },
     {
-        id: "academic-warning-system",
-        title: "AI Academic Performance Early Warning System",
-        tagline: "Predictive analytics platform that identifies academically at-risk students using machine learning.",
+        id: "financial-risk-fraud-detection",
+        title: "Machine Learning-Based Financial Risk Assessment and Fraud Detection Framework",
+        tagline: "Machine learning framework for assessing financial risk and detecting potentially fraudulent transactions.",
         category: "AI / ML",
-        tags: ["Python", "FastAPI", "Next.js", "MongoDB", "Scikit-Learn"],
-        shortDesc: "Machine learning system that analyzes academic data to identify at-risk students and provide early intervention insights.",
-        problem: "Educational institutions struggle to identify struggling students before end-of-term failures occur.",
-        solution: "Designed an AI-powered academic monitoring platform that combines machine learning models with an interactive dashboard.",
-        impact: "Provides educators with early academic risk insights to support timely interventions.",
-        github: "https://github.com/ArpitVentures/academic-warning-system",
-        featured: true
+        tags: ["Python", "Machine Learning", "Scikit-Learn", "Data Analysis"],
+        shortDesc: "Machine learning-based system designed to assess financial risk and identify potentially fraudulent patterns in financial data.",
+        problem: "Financial systems need reliable ways to assess risk and identify suspicious patterns in transaction and financial data.",
+        solution: "Developing a machine learning framework that combines data processing, predictive modeling, and fraud detection to support financial risk assessment.",
+        impact: "Aims to provide data-driven risk insights and assist in identifying potentially fraudulent activity.",
+        github: "https://github.com/ArpitSrivastava28/financial-risk-fraud-framework",
+        featured: true,
+
+        backgroundImage: "/projects/financial-risk.png",
+        backgroundColor: "#06191A"
     },
     {
         id: "focus-guard-vision",
@@ -111,8 +120,11 @@ export const projectsData: Project[] = [
         shortDesc: "Computer vision application running locally to monitor fatigue, eye strain, and distraction during work sessions.",
         problem: "Remote engineers and students face undetected fatigue and focus loss during long computer sessions.",
         solution: "Implemented local OpenCV facial landmark tracking to provide real-time focus feedback without external video transmission.",
-        github: "https://github.com/ArpitVentures/focus-guard",
-        featured: false
+        github: "https://github.com/ArpitVentures/focus-guard-vision",
+        featured: false,
+
+        backgroundImage: "/projects/focusguard.png",
+        backgroundColor: "#061426"
     },
     {
         id: "arpit-os-portfolio",
@@ -123,9 +135,12 @@ export const projectsData: Project[] = [
         shortDesc: "Interactive developer portfolio built with an authentic terminal/OS aesthetic, motion triggers, and responsive layout.",
         problem: "Generic portfolio websites fail to represent software engineering fundamentals and technical personality.",
         solution: "Architected a custom CLI-themed interface mimicking operating system commands and fast keyboard navigation.",
-        github: "https://github.com/ArpitVentures/my-portfolio",
+        github: "https://github.com/ArpitVentures/arpit-portfolio",
         demo: "https://arpitsrivastava.dev",
-        featured: false
+        featured: false,
+
+        backgroundImage: "/projects/arpit-os.png",
+        backgroundColor: "#071016"
     },
     {
         id: "expense-tracker-java",
@@ -136,9 +151,12 @@ export const projectsData: Project[] = [
         shortDesc: "Console-based application for recording income and expenses, tracking balances, and managing monthly spending using OOP principles.",
         problem: "Managing daily expenses manually makes it difficult to understand spending habits and maintain budgets.",
         solution: "Built a Java application that organizes financial records, categorizes transactions, and calculates balances through a simple CLI.",
-        github: "https://github.com/ArpitVentures/expense-tracker-java",
+        github: "https://github.com/ArpitVentures/Java-Expense-Tracker",
         featured: false,
-        isFoundation: true
+        isFoundation: true,
+
+        backgroundImage: "/projects/java-expense.png",
+        backgroundColor: "#1A0B04"
     },
     {
         id: "student-management-java",
@@ -149,9 +167,12 @@ export const projectsData: Project[] = [
         shortDesc: "Java-based application for managing student information, supporting record creation, updates, searching, and deletion through a structured menu interface.",
         problem: "Managing student records manually becomes inefficient as the number of students grows.",
         solution: "Developed a CRUD-based Java application that stores and manages student information while strengthening object-oriented design.",
-        github: "https://github.com/ArpitVentures/student-management-java",
+        github: "https://github.com/ArpitVentures/Student_Management_System",
         featured: false,
-        isFoundation: true
+        isFoundation: true,
+
+        backgroundImage: "/projects/student-management.png",
+        backgroundColor: "#071326"
     },
     {
         id: "notes-manager-java",
@@ -162,23 +183,26 @@ export const projectsData: Project[] = [
         shortDesc: "Console application for creating, viewing, editing, and deleting notes while practicing file handling and clean application structure.",
         problem: "Quickly organizing personal notes without relying on external software can be difficult for simple use cases.",
         solution: "Built a lightweight Java notes manager that stores and retrieves notes efficiently using Java file operations.",
-        github: "https://github.com/ArpitVentures/notes-manager-java",
+        github: "https://github.com/ArpitVentures/Notes_Manager_System",
         featured: false,
-        isFoundation: true
+        isFoundation: true,
+
+        backgroundImage: "/projects/java-notes.png",
+        backgroundColor: "#10091F"
     }
 ];
 
 export const journeyEvents: JourneyEvent[] = [
     {
         year: "2024",
-        title: "Started B.Tech CSE (AI/ML)",
+        title: "Started B.TECH CSE (AI/ML)",
         subtitle: "Computer Science Fundamentals",
         description: "Began my CS degree focused on core programming, object-oriented concepts, and problem-solving fundamentals.",
         cmd: "$ init --education",
-        status: "COMPLETED"
+        status: "IN_PROGRESS"
     },
     {
-        year: "2024",
+        year: "2025",
         title: "Java Console Projects",
         subtitle: "Logic & Data Structures",
         description: "Built command-line tools and console applications in Java to strengthen algorithms, memory logic, and clean code principles.",
@@ -186,7 +210,7 @@ export const journeyEvents: JourneyEvent[] = [
         status: "COMPLETED"
     },
     {
-        year: "2025",
+        year: "2026",
         title: "ORBIQ Productivity Workspace",
         subtitle: "Full-Stack SaaS Application",
         description: "Built and deployed a complete productivity SaaS platform featuring AI assistance, Razorpay billing, and team workspaces.",
@@ -194,19 +218,19 @@ export const journeyEvents: JourneyEvent[] = [
         status: "COMPLETED"
     },
     {
-        year: "2025",
+        year: "2026",
         title: "Software Developer Intern @ W3Villa",
-        subtitle: "Real-World Engineering Experience",
-        description: "Worked on client projects, REST API development, code optimization, and industry engineering practices.",
+        subtitle: "Software Development Experience",
+        description: "Worked on full-stack application development, REST APIs, backend logic, database operations, and software development workflows.",
         cmd: "$ sudo service internship start",
         status: "COMPLETED"
     },
     {
         year: "2026",
-        title: "Academic Warning System",
-        subtitle: "AI/ML Predictive Risk Pipeline",
-        description: "Developing an AI-driven academic monitoring platform to detect student failure risks early using machine learning.",
-        cmd: "$ python train_model.py",
+        title: "VISION",
+        subtitle: "Personal AI Assistant Project",
+        description: "Building VISION as my current AI-focused project, exploring intelligent assistance, system interaction, and practical AI applications.",
+        cmd: "$ vision --initialize",
         status: "IN_PROGRESS"
     },
     {
@@ -223,6 +247,6 @@ export const contactInfo = {
     personalEmail: "arpitsrivastava1101@gmail.com",
     businessEmail: "geniusbillionairearpit@gmail.com",
     github: "https://github.com/ArpitVentures",
-    linkedin: "https://www.linkedin.com/in/arpit-srivastava-a60326310/",
+    linkedin: "https://www.linkedin.com/in/arpit-srivastava-wd",
     location: "India 🇮🇳",
 };
