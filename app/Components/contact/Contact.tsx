@@ -12,9 +12,9 @@ export default function Contact() {
 
                 <div className="lg:col-span-5 space-y-6">
                     <div className="flex flex-col items-start">
-            <span className="font-mono text-xs text-[#38BDF8] font-bold tracking-widest uppercase mb-2">
-              $ socket --open
-            </span>
+                        <span className="font-mono text-xs text-[#38BDF8] font-bold tracking-widest uppercase mb-2">
+                          $ socket --open
+                        </span>
                         <h2 className="text-3xl md:text-4xl font-black font-heading tracking-tight text-white uppercase leading-tight">
                             Available for internships, collaborations, and exciting software projects.
                         </h2>
@@ -36,7 +36,9 @@ export default function Contact() {
                 <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     <a
-                        href={`mailto:${contactInfo.personalEmail}`}
+                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${contactInfo.personalEmail}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="clickable bg-[#0D0D0D] border border-[#1F1F1F] hover:border-[#38BDF8]/50 p-6 rounded-2xl group transition duration-300 flex flex-col justify-between h-48"
                     >
                         <div className="flex justify-between items-start">
@@ -55,7 +57,9 @@ export default function Contact() {
                     </a>
 
                     <a
-                        href={`mailto:${contactInfo.businessEmail}`}
+                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${contactInfo.businessEmail}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="clickable bg-[#0D0D0D] border border-[#1F1F1F] hover:border-[#8B5CF6]/50 p-6 rounded-2xl group transition duration-300 flex flex-col justify-between h-48"
                     >
                         <div className="flex justify-between items-start">
@@ -76,7 +80,7 @@ export default function Contact() {
                     <a
                         href={contactInfo.github}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="clickable bg-[#0D0D0D] border border-[#1F1F1F] hover:border-[#38BDF8]/50 p-6 rounded-2xl group transition duration-300 flex flex-col justify-between h-36"
                     >
                         <div className="flex justify-between items-start">
@@ -90,10 +94,11 @@ export default function Contact() {
                     </a>
 
                     <div className="grid grid-cols-2 gap-4">
+
                         <a
                             href={contactInfo.linkedin}
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="clickable bg-[#0D0D0D] border border-[#1F1F1F] hover:border-[#38BDF8]/50 p-5 rounded-2xl group transition duration-300 flex flex-col justify-between h-36"
                         >
                             <div className="flex justify-between items-start">
@@ -109,6 +114,7 @@ export default function Contact() {
                         <a
                             href="/resume.pdf"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="clickable bg-[#0D0D0D] border border-[#1F1F1F] hover:border-[#38BDF8]/50 p-5 rounded-2xl group transition duration-300 flex flex-col justify-between h-36"
                         >
                             <div className="flex justify-between items-start">
