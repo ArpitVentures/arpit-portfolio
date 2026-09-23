@@ -48,10 +48,10 @@ export default function ArpitOSLoader({ onCompleteAction }: LoaderProps) {
         >
             <div className="text-center space-y-6 max-w-md px-4">
                 <div className="space-y-2">
-          <span className="text-xs tracking-widest text-violet-400 border border-violet-500/30 px-3 py-1 rounded-full bg-violet-500/10">
-            ARPIT OS v1.0
-          </span>
-                    <h1 className="text-4xl md:text-5xl font-black tracking-widest text-white uppercase font-heading drop-shadow-[0_0_25px_rgba(0,229,255,0.4)] mt-4">
+                    <span className="text-xs tracking-widest text-violet-400 border border-violet-500/30 px-3 py-1 rounded-full bg-violet-500/10">
+                        ARPIT OS v1.0
+                    </span>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-widest text-white uppercase font-heading drop-shadow-[0_0_25px_rgba(0,229,255,0.4)] mt-4">
                         {progress < 100 ? 'INITIALIZING' : 'ACCESS GRANTED'}
                     </h1>
                 </div>

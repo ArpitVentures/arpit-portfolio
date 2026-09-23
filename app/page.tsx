@@ -11,6 +11,7 @@ import Projects from './Components/projects/Projects';
 import Journey from './Components/journey/Journey';
 import Contact from './Components/contact/Contact';
 import Footer from './Components/footer/Footer';
+import ScrollToTop from './Components/scrollToTop/ScrollToTop';
 
 const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
     <motion.div
@@ -48,7 +49,7 @@ export default function Home() {
             </AnimatePresence>
 
             {!isLoading && (
-                <div className="space-y-4">
+                <div>
                     <Navbar />
                     <Hero />
 
@@ -73,6 +74,7 @@ export default function Home() {
                     </SectionWrapper>
 
                     <Footer />
+                    <ScrollToTop />
                 </div>
             )}
         </main>

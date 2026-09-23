@@ -3,7 +3,7 @@ import { Terminal, Code2 } from 'lucide-react';
 
 export default function Footer() {
     return (
-        <footer className="py-12 px-6 md:px-16 bg-[#050505] border-t border-[#1F1F1F] font-mono text-xs text-[#A3A3A3]">
+        <footer className="py-10 sm:py-12 px-5 sm:px-6 md:px-16 bg-[#050505] border-t border-[#1F1F1F] font-mono text-xs text-[#A3A3A3]">
             <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-6">
 
                 <div className="flex items-center gap-2 bg-[#0D0D0D] border border-[#1F1F1F] px-4 py-2 rounded-xl text-neutral-200 shadow-md">
@@ -21,7 +21,7 @@ export default function Footer() {
                         <span className="text-[10px] text-neutral-600">C++</span>
                     </div>
 
-                    <div className="p-5 text-neutral-300 text-xs leading-relaxed">
+                    <div className="p-4 sm:p-5 text-neutral-300 text-[11px] sm:text-xs leading-relaxed">
                         <p className="text-[#A3A3A3]">while (alive) &#123;</p>
                         <p className="pl-6 text-[#38BDF8]">stayCurious();</p>
                         <p className="pl-6 text-[#38BDF8]">build();</p>
